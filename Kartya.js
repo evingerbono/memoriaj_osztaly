@@ -1,21 +1,25 @@
-class Kartya{
+class Kartya {
     #kep
     #id
     #divElem
     #kepElem
-    constructor(kep,id,szuloElem){
-        this.#kep=kep;
-        this.#id=id;
-        this.szuloElem=szuloElem;
+    constructor(kep, id, szuloElem) {
+        this.#kep = kep;
+        this.#id = id;
+        this.#divElem = document.createElement("div");
+        this.#kepElem = document.createElement("img");
+        this.#kepElem.src = this.#kep;
+        this.#divElem.appendChild(this.#kepElem);
+        szuloElem.appendChild(this.#divElem);
     }
-    getkep(){
+    getkep() {
         return this.#kep;
     }
-    getid(){
+    getid() {
         return this.#id;
     }
-    SetKepElem(kep){
-        this.#kepElem=kep;
+    SetKepElem(kep) {
+        this.#kepElem = kep;
     }
 }
 export default Kartya;
